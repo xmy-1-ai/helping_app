@@ -28,12 +28,12 @@ Page({
             }, {
               icon: "../../image/update.png",
               title: "已帮助求助",
-              click: "journal",
+              click: "go_yibangzhu",
               littleTitle: "0"
             }, {
               icon: "../../image/login.png",
               title: "勋章",
-              click: "login",
+              click: "go_xunzhang",
               littleTitle: "0"
             }
         ]
@@ -111,6 +111,16 @@ Page({
     go_yifabu(){
         wx.navigateTo({
           url: '../yifabu/yifabu',
+        })
+    },
+    go_yibangzhu(){
+        wx.navigateTo({
+          url: '../yibangzhu/yibangzhu',
+        })
+    },
+    go_xunzhang(){
+        wx.navigateTo({
+          url: '../xunzhang/xunzhang',
         })
     }
 })
