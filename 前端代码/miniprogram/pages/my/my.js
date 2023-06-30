@@ -6,7 +6,37 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        xinxi:[
+            {
+              icon: "../../image/class.png",
+              title: "反馈",
+              /*littleTitle: "访客班级",*/
+              click: "class"
+            },{
+              icon: "../../image/academy.png",
+              title: "退出",
+              /*littleTitle: "访客专业",*/
+              click: "academy"
+            }
+        ],
+        list:[
+            {
+              icon: "../../image/aboutUs.png",
+              title: "已发布求助",
+              click: "about",
+              littleTitle: "0"
+            }, {
+              icon: "../../image/update.png",
+              title: "已帮助求助",
+              click: "journal",
+              littleTitle: "0"
+            }, {
+              icon: "../../image/login.png",
+              title: "勋章",
+              click: "login",
+              littleTitle: "0"
+            }
+        ]
     },
 
     /**

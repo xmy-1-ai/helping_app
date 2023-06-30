@@ -1,9 +1,49 @@
 <!--pages/my/my.wxml-->
+<import src="../template/template.wxml" />
+<import src="../template/template" />
+<view class="container">
+  <!-- 背景图片区域 -->
+  <view class="bgcImage">
+    <!-- 用户信息区域 -->
+    <view class="userInfo">
+      <!-- 头像 -->
+      <view class="userAvatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+
+      <!-- Txt -->
+      <view class="userInfoTxt">
+        <!-- 姓名 -->
+        <view class="userName">{{userInfo.nickname}}</view>
+        
+        <!-- 学院 
+        <view class="userAcademy">
+          <view class="guestAcademy"></view>
+        </view>-->
+      </view>
+    </view>
+    <!-- 班级/专业Dialog -->
+    <view class="userInfoDialog">
+      <block wx:for="{{xinxi}}" wx:key="index">
+        <template is="userInfo_item" data="{{item}}">
+        </template>
+      </block>
+    </view>
+  </view>
+  <!--  关于我们...Dialog -->
+  <view class="more">
+    <block wx:for="{{list}}" wx:key="index">
+      <template is="navigate_item" data="{{item, right:'../../image/right.png'}}"></template>
+    </block>
+  </view> 
+</view>
+<!--
 <view>
   <view class="box">
     <image src="{{userInfo.Img}}"></image>
   </view>
 </view>
 <view>
-  <view class="nicheng">{{userInfo.nickname}}</view>
+  <view class="nicheng">昵称：{{userInfo.nickname}}</view>
 </view>
+-->
