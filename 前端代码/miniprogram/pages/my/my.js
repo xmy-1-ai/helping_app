@@ -23,7 +23,7 @@ Page({
             {
               icon: "../../image/aboutUs.png",
               title: "已发布求助",
-              click: "about",
+              click: "go_yifabu",
               littleTitle: "0"
             }, {
               icon: "../../image/update.png",
@@ -107,5 +107,10 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+    go_yifabu(){
+        wx.navigateTo({
+          url: '../yifabu/yifabu',
+        })
     }
 })

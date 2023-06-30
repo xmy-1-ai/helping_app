@@ -9,8 +9,8 @@
         "pages/my/my",
         "pages/index/index",
         "pages/liaotian/liaotian",
-        "pages/search/search"
-        
+        "pages/search/search",
+        "pages/yifabu/yifabu"
     ],
     "permission": {
         "scope.userLocation": {

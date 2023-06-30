@@ -22,7 +22,7 @@
         </view>-->
       </view>
     </view>
-    <!-- 班级/专业Dialog -->
+    <!-- 反馈，退出 -->
     <view class="userInfoDialog">
       <block wx:for="{{xinxi}}" wx:key="index">
         <template is="userInfo_item" data="{{item}}">
@@ -30,10 +30,10 @@
       </block>
     </view>
   </view>
-  <!--  关于我们...Dialog -->
+  <!--  求助，勋章 -->
   <view class="more">
     <block wx:for="{{list}}" wx:key="index">
-      <template is="navigate_item" data="{{item, right:'../../image/right.png'}}"></template>
+      <template is="navigate_item" data="{{item}}"></template>
     </block>
   </view> 
 </view>

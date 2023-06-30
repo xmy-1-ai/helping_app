@@ -57,7 +57,7 @@ page {
   color: rgb(106, 106, 106);
 }
 
-/* 第二个Dialog */
+/* 第二个Dialog（求助，勋章） */
 .more {
   position: absolute;
   bottom: 500rpx;
