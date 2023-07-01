@@ -7,6 +7,8 @@
         "include": []
     },
     "setting": {
+        "ignoreDevUnusedFiles": false,
+        "ignoreUploadUnusedFiles": false,
         "urlCheck": true,
         "es6": true,
         "enhance": true,
@@ -41,8 +43,7 @@
         "minifyWXSS": true,
         "showES6CompileOption": false,
         "useSummerCompiler": false,
-        "condition": false,
-        "ignoreUploadUnusedFiles": false
+        "condition": false
     },
     "compileType": "miniprogram",
     "libVersion": "2.25.3",
