@@ -1,5 +1,5 @@
 <!--pages/my/my.wxml-->
-<import src="../template/template.wxml" />
+<import src="../template/template1.wxml" />
 <import src="../template/template" />
 <view class="container">
   <!-- 背景图片区域 -->
