@@ -8,7 +8,10 @@
     <view class="userInfo">
       <!-- 头像 -->
       <view class="userAvatar">
-        <open-data type="userAvatarUrl"></open-data>
+        <view class="box">
+        <image src="{{userInfo.Img}}"></image>
+        </view>
+        <!--<open-data type="userAvatarUrl"></open-data>-->
       </view>
 
       <!-- Txt -->
