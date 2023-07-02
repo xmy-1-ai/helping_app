@@ -6,40 +6,41 @@ Page({
      * 页面的初始数据
      */
     data: {
-        help:[{
             _id:null,
+            ID:null,
             tip:null,
             details:null,
             loc:null,
             Img:null,
-            ID:null
-        }]
     },
 
     gethelp(){
-        let help
         let that=this
         wx.cloud.database().collection('forhelp_info').where({
-            _id:this.data.help._id,
+            _id:this.data._id,
         }).get({
             success(res){
-                //console.log(res.data)
-                help=res.data
+                console.log(res.data[0])
+                help=res.data[0]
                 that.setData({
-                    help:res.data
+                    ID:res.data[0].ID,
+                    tip:res.data[0].tip,
+                    details:res.data[0].details,
+                    loc:res.data[0].loc,
+                    Img:res.data[0].Img
                 })
             }
         })
-        console.log(this.data.help)
+        //console.log(this.data.help.tip)
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        this.data.help._id=options._id
+        this.data._id=options._id
         this.gethelp()
-        console.log(this.data.help._id)
+        console.log(this.data._id)
     },
 
     /**

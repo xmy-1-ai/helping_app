@@ -1,15 +1,17 @@
 <!--pages/helps/helps.wxml-->
 <view class="big">
     <view></view>
-    <view>
+    <view class="biaoti">{{tip}}</view>
+    <!--<view>
         <view class="box"  wx:for="{{help}}"wx:key="_id">
             <image src="{{item.Img}}"></image>
             <view clss="title">
             <view class="bigsize">标题：{{item.tip}}</view>
             <view class="bigsize">发布人：{{item.nickname}}</view>
+            <view class="smallsize">内容：{{item.details}}</view>
         </view>
-            <!--<view class="didian">{{item.loc}}</view>-->
+            <view class="didian">{{item.loc}}</view>-
         </view>
-    </view>
+    </view>-->
     <view></view>
 </view>

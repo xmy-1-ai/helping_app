@@ -3,11 +3,13 @@ image{
     width: 200rpx;
     height: 200rpx;
     border-radius: 40rpx;
+    align-items: center;
 }
 .big{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 .title{
     display: flex;
@@ -16,4 +18,8 @@ image{
 }
 .bigsize{
     font-size: 50rpx;
+}
+.smallsize{
+    display:flex;
+
 }
