@@ -1,1 +1,19 @@
 /* pages/helps/helps.wxss */
+image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 40rpx;
+}
+.big{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bigsize{
+    font-size: 50rpx;
+}

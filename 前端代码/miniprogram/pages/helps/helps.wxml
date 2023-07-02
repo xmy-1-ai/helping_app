@@ -1,5 +1,15 @@
 <!--pages/helps/helps.wxml-->
-<view>
-    <iamge src="{{help.Img}}"></iamge>
+<view class="big">
+    <view></view>
+    <view>
+        <view class="box"  wx:for="{{help}}"wx:key="_id">
+            <image src="{{item.Img}}"></image>
+            <view clss="title">
+            <view class="bigsize">标题：{{item.tip}}</view>
+            <view class="bigsize">发布人：{{item.nickname}}</view>
+        </view>
+            <!--<view class="didian">{{item.loc}}</view>-->
+        </view>
+    </view>
+    <view></view>
 </view>
-<text>pages/helps/helps.wxml</text>

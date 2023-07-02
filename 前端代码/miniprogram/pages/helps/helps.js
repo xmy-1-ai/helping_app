@@ -23,13 +23,14 @@ Page({
             _id:this.data.help._id,
         }).get({
             success(res){
-                console.log(res.data)
+                //console.log(res.data)
                 help=res.data
                 that.setData({
-                    help:res.data[0]
+                    help:res.data
                 })
             }
         })
+        console.log(this.data.help)
     },
 
     /**
