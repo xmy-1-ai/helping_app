@@ -46,7 +46,7 @@ page {
 /* 班级/专业 */
 .userInfoDialog {
   position: absolute;
-  bottom: -500rpx;
+  bottom: -600rpx;
   margin: 0 20rpx;
   width: 710rpx;
   height: 200rpx;
@@ -60,7 +60,7 @@ page {
 /* 第二个Dialog（求助，勋章） */
 .more {
   position: absolute;
-  bottom: 500rpx;
+  bottom: 700rpx;
   margin: 0 20rpx;
   margin-top: 170rpx;
   width: 710rpx;
