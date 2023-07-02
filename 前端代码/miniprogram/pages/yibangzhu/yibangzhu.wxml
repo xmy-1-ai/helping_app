@@ -2,9 +2,9 @@
 <view class="big">
     <view></view>
     <view>
-        <view class="box" wx:for="{{helpedlist}}"wx:key="_id">
+        <view class="box"  wx:for="{{helpedlist}}"wx:key="_id">
             <image src="{{item.Img}}"></image>
-            <view class="biaoti">{{item.tip}}</view>
+            <view class="biaoti" bindtap="go_help" data-info="{{item._id}}">{{item.tip}}</view>
             <!--<view class="didian">{{item.loc}}</view>-->
         </view>
     </view>

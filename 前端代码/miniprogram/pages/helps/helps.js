@@ -1,34 +1,32 @@
+// pages/helps/helps.js
 const app=getApp()
 Page({
-
+    
     /**
      * 页面的初始数据
      */
     data: {
-        helpedlist:[
-            {
-                _id:null,
-                tip:null,
-                details:null,
-                loc:null,
-                Img:null,
-                ID:null
-            }
-        ]
+        help:[{
+            _id:null,
+            tip:null,
+            details:null,
+            loc:null,
+            Img:null,
+            ID:null
+        }]
     },
-    
-    gethelped(){
-        let helpedlist
+
+    gethelp(){
+        let help
         let that=this
         wx.cloud.database().collection('forhelp_info').where({
-            helperid:app.globalData.userInfo.ID,
-            helpernickname:app.globalData.userInfo.nickname,
+            _id:this.data.help._id,
         }).get({
             success(res){
                 console.log(res.data)
-                helpedlist=res.data
+                help=res.data
                 that.setData({
-                    helpedlist:res.data
+                    help:res.data[0]
                 })
             }
         })
@@ -38,7 +36,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        this.gethelped()
+        this.data.help._id=options._id
+        this.gethelp()
+        console.log(this.data.help._id)
     },
 
     /**
@@ -52,11 +52,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        this.setData({
-            userInfo:app.globalData.userInfo
-            
-        }),
-        this.gethelped()
+        this.gethelp()
     },
 
     /**
@@ -70,7 +66,7 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-
+        
     },
 
     /**
@@ -92,10 +88,5 @@ Page({
      */
     onShareAppMessage() {
 
-    },
-    go_help(e){
-        wx.navigateTo({
-          url: '../helps/helps?_id='+e.currentTarget.dataset.info,
-        })
     }
 })

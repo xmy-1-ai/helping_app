@@ -1,0 +1,5 @@
+<!--pages/helps/helps.wxml-->
+<view>
+    <iamge src="{{help.Img}}"></iamge>
+</view>
+<text>pages/helps/helps.wxml</text>

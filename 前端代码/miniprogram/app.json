@@ -12,6 +12,7 @@
         "pages/search/search",
         "pages/xunzhang/xunzhang",
         "pages/yibangzhu/yibangzhu",
+        "pages/helps/helps",
         "pages/yifabu/yifabu"
     ],
     "permission": {
