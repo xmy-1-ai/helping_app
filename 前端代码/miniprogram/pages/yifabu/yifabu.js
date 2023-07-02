@@ -20,7 +20,8 @@ Page({
         let helpinglist
         let that=this
         wx.cloud.database().collection('forhelp_info').where({
-            _openid:app.globalData.userInfo._openid,
+            ID:app.globalData.userInfo.ID,
+            nickname:app.globalData.userInfo.nickname,
         }).get({
             success(res){
                 console.log(res.data)

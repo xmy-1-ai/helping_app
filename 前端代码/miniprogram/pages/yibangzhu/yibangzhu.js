@@ -1,4 +1,3 @@
-// pages/yibangzhu/yibangzhu.js
 const app=getApp()
 Page({
 
@@ -6,21 +5,38 @@ Page({
      * 页面的初始数据
      */
     data: {
-        helpinglist:[
+        helpedlist:[
             {
                 tip:null,
                 details:null,
-                loc:null
+                loc:null,
+                Img:null
             }
         ]
-
+    },
+    
+    gethelped(){
+        let helpedlist
+        let that=this
+        wx.cloud.database().collection('forhelp_info').where({
+            helperid:app.globalData.userInfo.ID,
+            helpernickname:app.globalData.userInfo.nickname,
+        }).get({
+            success(res){
+                console.log(res.data)
+                helpedlist=res.data
+                that.setData({
+                    helpedlist
+                })
+            }
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.gethelped()
     },
 
     /**
@@ -36,7 +52,9 @@ Page({
     onShow() {
         this.setData({
             userInfo:app.globalData.userInfo
-        })
+            
+        }),
+        this.gethelped()
     },
 
     /**
