@@ -1,7 +1,7 @@
 <!--pages/message/message.wxml-->
 <view class="big">
   <view wx:if="{{userInfo}}">
-  <view>
+  <view>  
     <view class="box" bindtap="go_liaotian" wx:for="{{userlist}}"wx:key="_id">
       
         <image src="{{item.Img}}" class="imageformat"></image>

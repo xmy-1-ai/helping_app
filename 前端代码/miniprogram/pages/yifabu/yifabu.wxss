@@ -1,1 +1,40 @@
 /* pages/yifabu/yifabu.wxss */
+page{
+    background-color: orchid;
+}
+.big{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around ;
+}
+.box{
+    background-color: orange;
+    border-radius: 30rpx;
+    margin-top: 10rpx;
+    width: 700rpx;
+    height:100rpx;
+    display:flex;
+    flex-direction: row;
+    margin-left: 10rpx;
+
+}
+image{
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 30rpx;
+}
+
+.biaoti{
+    font-size: 50rpx;
+    margin-top: 25rpx;
+    margin-left: 20rpx;
+}
+
+.didian{
+    
+    font-size: 30rpx;
+    margin-top: 25rpx;
+    margin-left: 100rpx;
+}

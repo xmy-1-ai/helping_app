@@ -1,18 +1,42 @@
 // pages/yifabu/yifabu.js
+const app=getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        helpinglist:[
+            {
+                tip:null,
+                details:null,
+                loc:null,
+                Img:null
+            }
+        ]
+    },
+    
+    getyifabu(){
+        let helpinglist
+        let that=this
+        wx.cloud.database().collection('forhelp_info').where({
+            _openid:app.globalData.userInfo._openid,
+        }).get({
+            success(res){
+                console.log(res.data)
+                helpinglist=res.data
+                that.setData({
+                    helpinglist
+                })
+            }
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.getyifabu()
     },
 
     /**
@@ -26,7 +50,11 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        this.setData({
+            userInfo:app.globalData.userInfo
+            
+        }),
+        this.getyifabu()
     },
 
     /**

@@ -1,2 +1,12 @@
 <!--pages/yifabu/yifabu.wxml-->
-<text>pages/yifabu/yifabu.wxml</text>
+<view class="big">
+    <view></view>
+    <view>
+        <view class="box" wx:for="{{helpinglist}}"wx:key="_id">
+            <image src="{{item.Img}}"></image>
+            <view class="biaoti">{{item.tip}}</view>
+            <!--<view class="didian">{{item.loc}}</view>-->
+        </view>
+    </view>
+    <view></view>
+</view>
